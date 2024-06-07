@@ -85,7 +85,7 @@ En conjunto, estos componentes colaboran para ofrecer una solución integral que
 
 
 # Tema 2
-#  Requerimientos del sistema separados por asignaturas
+## Requerimientos del sistema separados por asignaturas
 
 ## Teoria de la Distribución y Probabilidad
 
