@@ -67,11 +67,17 @@
 ### 4. ClasificacionObjeto
 ## Este es un enumerado que clasifica los tipos de objetos en:
 1. PELIGROSO
-2. CORROSIVO
-3. INFLAMABLE
-4. ORGANICO
-5. INORGANICO
-6. QUIRURGICO
+   
+3. CORROSIVO
+   
+5. INFLAMABLE
+   
+7. ORGANICO
+   
+9. INORGANICO
+   
+10. QUIRURGICO
+    
 ## Relaciones Importantes:
 1. Un Usuario puede tener múltiples PerfilUsuario.
 2. GestionNotificaciones gestiona múltiples notificaciones por usuario.
