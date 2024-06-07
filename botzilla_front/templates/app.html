@@ -1,0 +1,188 @@
+
+<link rel="stylesheet" href="style.css">
+<div class="control-panel">
+    <!-- Fuente de video -->
+    <div class="video-container">
+        <video id="video-source" width="320" height="240" controls>
+            <source src="movie.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Sliders para acelerar y frenar -->
+    <div class="sliders">
+        <div>
+            <label for="accelerate">Acelerar</label>
+            <input type="range" id="accelerate">
+        </div>
+        <div>
+            <label for="direcion">direccion</label>
+            <input type="range" id="direccion">
+        </div>
+    </div>
+
+    <!-- Panel de visualización de mensajes -->
+    <div class="message-panel">
+        <p id="message">Mensaje</p>
+    </div>
+
+    <!-- Botón para cambiar al control de un brazo robótico -->
+    <button id="switch-control">Cambiar a control de brazo robótico</button>
+
+    <!-- Controles del brazo robótico -->
+    <div class="robot-arm-controls" style="display: none;">
+        <div>
+            <label for="advance">Avanzar</label>
+            <input type="range" id="advance">
+        </div>
+        <div>
+            <label for="rotate">Girar</label>
+            <input type="range" id="rotate">
+        </div>
+        <div>
+            <label for="open-close">Abrir/Cerrar</label>
+            <input type="range" id="open-close">
+        </div>
+        <div>
+            <label for="up-down">Arriba/Abajo</label>
+            <input type="range" id="up-down">
+        </div>
+    </div>
+</div>
+
+#Style
+body {
+    background: linear-gradient(to right, #000000, #0f0101);
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.control-panel {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    background: linear-gradient(to right,  #6a3093, #010e31);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.75);
+}
+
+.message-panel {
+    background: #ffffff;
+    color: #000000;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    order: 1;
+}
+
+.video-container, .sliders, .robot-arm-controls {
+    order: 2;
+    width: 100%;
+}
+
+.video-container {
+    text-align: center;
+}
+
+.sliders, .robot-arm-controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.sliders div, .robot-arm-controls div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #36045a, #170825);
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.slider-horizontal {
+    width: 100%;
+}
+
+.slider-vertical {
+    writing-mode: bt-lr; /* IE */
+    -webkit-appearance: slider-vertical; /* WebKit */
+    width: 8px;
+    height: 150px;
+    padding: 0 5px;
+}
+
+#switch-control {
+    order: 3;
+    margin-top: auto;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(to right, #5202e6, #434343);
+    color: #fdfdfd;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#script
+let isRobotArmControlVisible = false;
+
+document.getElementById('switch-control').addEventListener('click', function() {
+    if (isRobotArmControlVisible) {
+        // Si los controles del brazo robótico están visibles, ocúltalos y muestra los sliders
+        document.querySelector('.robot-arm-controls').style.display = 'none';
+        document.querySelector('.sliders').style.display = 'block';
+    } else {
+        // Si los sliders están visibles, ocúltalos y muestra los controles del brazo robótico
+        document.querySelector('.sliders').style.display = 'none';
+        document.querySelector('.robot-arm-controls').style.display = 'block';
+    }
+
+    // Cambia el estado
+    isRobotArmControlVisible = !isRobotArmControlVisible;
+});
+// Asume que los ids de los sliders son 'accelerate', 'direccion', 'advance', 'rotate', 'open-close', 'up-down'
+const sliders = ['accelerate', 'direccion', 'advance', 'rotate', 'open-close', 'up-down'];
+
+sliders.forEach(function(sliderId) {
+    const slider = document.getElementById(sliderId);
+
+    // Agrega un controlador de eventos 'input' al slider
+    slider.addEventListener('input', function() {
+        let message;
+        switch (sliderId) {
+            case 'accelerate':
+                message = this.value > 50 ? 'Acelerando' : 'Desacelerando';
+                break;
+            case 'direccion':
+                message = 'Girando ' + (this.value > 50 ? 'derecha' : 'izquierda');
+                break;
+            case 'advance':
+                message = this.value > 50 ? 'Avanzando' : 'Retrocediendo';
+                break;
+            case 'rotate':
+                message = 'Girando ' + (this.value > 50 ? 'derecha' : 'izquierda');
+                break;
+            case 'open-close':
+                message = this.value > 50 ? 'Abriendo' : 'Cerrando';
+                break;
+            case 'up-down':
+                message = this.value > 50 ? 'Subiendo mano' : 'Bajando mano';
+                break;
+        }
+
+        // Muestra el mensaje en el panel de mensajes
+        document.getElementById('message').textContent = message;
+    });
+
+    // Agrega un controlador de eventos 'change' al slider
+    slider.addEventListener('change', function() {
+        // Regresa el slider al punto central
+        this.value = 50;
+    });
+});

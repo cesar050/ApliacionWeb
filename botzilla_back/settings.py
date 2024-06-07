@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    "botzilla_front.apps.BotzillaFrontConfig"
+
 ]
 
 MIDDLEWARE = [
@@ -52,8 +54,6 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'botzilla_back.urls'
-
-# Configuraciones de CORS (puede ir aquí)
 
 TEMPLATES = [
     {
