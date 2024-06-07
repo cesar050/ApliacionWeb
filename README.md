@@ -201,4 +201,6 @@ El sistema de gestión de basura necesita garantizar la eficiencia de los algori
    - El sistema debe generar documentación detallada y reportes sobre la complejidad de los algoritmos, incluyendo gráficos y estadísticas que faciliten la comprensión y evaluación del rendimiento por parte de los usuarios.
    - Estos reportes deben estar disponibles para los administradores del sistema y los usuarios avanzados que necesiten entender el comportamiento y la eficiencia de los algoritmos implementados.
 
-Implementar estos requisitos asegura que el sistema de gestión de basura no solo sea funcional, sino también eficiente y escalable, proporcionando a los usuarios una experiencia fluida y confiable.
+Implementar estos requisitos asegura que el sistema de gestión de basura no solo sea funcional,
+ sino también eficiente y escalable, proporcionando a los usuarios una experiencia fluida y confiable.
+
