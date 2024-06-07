@@ -175,4 +175,26 @@ En conjunto, estos componentes colaboran para ofrecer una solución integral que
    - **Oportunidades de negocio:**
      - Identificar y describir las oportunidades de negocio basadas en la información recolectada y cómo aprovecharlas.
 
+# Tema 2.2
 
+### Requerimientos del Sistema: Complejidad de Rendimiento de un Algoritmo
+
+El sistema de gestión de basura necesita garantizar la eficiencia de los algoritmos utilizados para diversas operaciones. A continuación, se especifican los requisitos del sistema relacionados con el análisis y optimización de la complejidad de rendimiento de los algoritmos:
+
+1. **Medición de la Complejidad de los Algoritmos**:
+   - El sistema debe ser capaz de medir y reportar la complejidad temporal (tiempo de ejecución) y espacial (uso de memoria) de los algoritmos utilizados para las tareas de recolección de datos, cálculo de estadísticas y generación de reportes.
+   - Se debe utilizar notación Big-O para expresar la complejidad en el peor caso, notación Omega para el mejor caso y notación Theta para casos promedio.
+
+2. **Optimización de Algoritmos**:
+   - El sistema debe implementar algoritmos eficientes que minimicen tanto el tiempo de ejecución como el uso de memoria.
+   - Debe haber un proceso continuo de monitoreo y optimización para mejorar la eficiencia de los algoritmos a medida que aumenta la cantidad de datos o se identifican cuellos de botella.
+
+3. **Análisis de Casos de Complejidad**:
+   - El sistema debe ser capaz de analizar y reportar la complejidad de los algoritmos en diferentes escenarios: mejor caso, peor caso y caso promedio.
+   - Este análisis debe incluir pruebas y evaluaciones periódicas para asegurar que los algoritmos mantengan un rendimiento óptimo bajo distintas condiciones.
+
+4. **Documentación y Reportes**:
+   - El sistema debe generar documentación detallada y reportes sobre la complejidad de los algoritmos, incluyendo gráficos y estadísticas que faciliten la comprensión y evaluación del rendimiento por parte de los usuarios.
+   - Estos reportes deben estar disponibles para los administradores del sistema y los usuarios avanzados que necesiten entender el comportamiento y la eficiencia de los algoritmos implementados.
+
+Implementar estos requisitos asegura que el sistema de gestión de basura no solo sea funcional, sino también eficiente y escalable, proporcionando a los usuarios una experiencia fluida y confiable.
