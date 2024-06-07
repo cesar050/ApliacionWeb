@@ -84,7 +84,8 @@ En conjunto, estos componentes colaboran para ofrecer una solución integral que
 
 
 
-# Requerimientos del sistema separados por asignaturas
+# Tema 2
+#  Requerimientos del sistema separados por asignaturas
 ## Probabilidad y Distribución en el Sistema de Gestión de Basura
 ## Requerimientos del Sistema
 ### El sistema de gestión de basura descrito en el diagrama UML tiene una serie de funcionalidades clave destinadas a optimizar y controlar la recolección y gestión de desechos. Entre estas funcionalidades, se incluyen requisitos específicos relacionados con la probabilidad y la distribución de los datos de recolección de basura. A continuación, se describen estos requisitos en detalle:
