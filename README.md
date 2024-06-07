@@ -8,10 +8,16 @@ https://github.com/cesar050/ApliacionWeb/assets/166522713/b7696171-16b6-487f-8dd
 
 
 Lista de comandos.
+
 .venv\Scripts\activate
+
 pip install -r requirements.txt
 
 python manage.py runserver
+
+Link del git page(defectuoso):
+
+https://cesar050.github.io/
 
 ![image](https://github.com/cesar050/ApliacionWeb/assets/166522713/aa96e1cf-e735-4be6-b38a-981fe3d005a6)
 
