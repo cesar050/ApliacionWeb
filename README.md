@@ -86,7 +86,9 @@ En conjunto, estos componentes colaboran para ofrecer una solución integral que
 
 # Tema 2
 #  Requerimientos del sistema separados por asignaturas
-## Probabilidad y Distribución en el Sistema de Gestión de Basura
+
+## Teoria de la Distribución y Probabilidad
+
 ## Requerimientos del Sistema
 ### El sistema de gestión de basura descrito en el diagrama UML tiene una serie de funcionalidades clave destinadas a optimizar y controlar la recolección y gestión de desechos. Entre estas funcionalidades, se incluyen requisitos específicos relacionados con la probabilidad y la distribución de los datos de recolección de basura. A continuación, se describen estos requisitos en detalle:
 1.	Recolección y Visualización de Datos Diarios:
@@ -124,7 +126,7 @@ En conjunto, estos componentes colaboran para ofrecer una solución integral que
 
 
 # Tema 2.1
-
+## Emprendimiento e Inovación Tecnológica 
 1. **Segmentación de Mercado**
    - **Ubicación Geográfica:**
      - El sistema debe ser capaz de identificar y segmentar a los usuarios en la ciudad de Loja, Ecuador.
@@ -176,6 +178,8 @@ En conjunto, estos componentes colaboran para ofrecer una solución integral que
      - Identificar y describir las oportunidades de negocio basadas en la información recolectada y cómo aprovecharlas.
 
 # Tema 2.2
+
+## Analisis Matematico
 
 ### Requerimientos del Sistema: Complejidad de Rendimiento de un Algoritmo
 
