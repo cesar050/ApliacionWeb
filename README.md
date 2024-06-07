@@ -1,4 +1,18 @@
 # botzilla_back
+
+TUTORIAL PARA INICIARLIZAR NUESTRA APLICACIÓN LOCALMENTE(DEBIDO A FALLAS TÉCNICAS EN GITHU PAGE).
+
+
+https://github.com/cesar050/ApliacionWeb/assets/166522713/b7696171-16b6-487f-8ddb-71e6ade5e659
+
+
+
+Lista de comandos.
+.venv\Scripts\activate
+pip install -r requirements.txt
+
+python manage.py runserver
+
 ![image](https://github.com/cesar050/ApliacionWeb/assets/166522713/aa96e1cf-e735-4be6-b38a-981fe3d005a6)
 
 # Redaccion: Casos de Uso
