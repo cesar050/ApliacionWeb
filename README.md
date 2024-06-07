@@ -90,26 +90,26 @@ En conjunto, estos componentes colaboran para ofrecer una solución integral que
 ## Teoria de la Distribución y Probabilidad
 
 ## Requerimientos del Sistema
-### El sistema de gestión de basura descrito en el diagrama UML tiene una serie de funcionalidades clave destinadas a optimizar y controlar la recolección y gestión de desechos. Entre estas funcionalidades, se incluyen requisitos específicos relacionados con la probabilidad y la distribución de los datos de recolección de basura. A continuación, se describen estos requisitos en detalle:
+### El sistema de gestión de residuo descrito en el diagrama UML tiene una serie de funcionalidades clave destinadas a optimizar y controlar la recolección y gestión de desechos. Entre estas funcionalidades, se incluyen requisitos específicos relacionados con la probabilidad y la distribución de los datos de recolección de residuos. A continuación, se describen estos requisitos en detalle:
 1.	Recolección y Visualización de Datos Diarios:
-# Cantidad de Basura Recogida al Día: El sistema debe registrar la cantidad de basura recogida cada día. Este dato debe ser accesible para el usuario a través de la interfaz de usuario.
+# Cantidad de residuos Recogidos al Día: El sistema debe registrar la cantidad de residuos recogidos cada día. Este dato debe ser accesible para el usuario a través de la interfaz de usuario.
 # Cálculo de Estadísticas Diarias: El sistema debe calcular y mostrar al usuario las siguientes estadísticas diarias:
-1.	Media: La media de la cantidad de basura recogida diariamente.
-2.	Mediana: La mediana de la cantidad de basura recogida diariamente.
+1.	Media: La media de la cantidad de residuos recogida diariamente.
+2.	Mediana: La mediana de la cantidad de residuos recogida diariamente.
 3.	Moda: La moda de la cantidad de basura recogida diariamente.
 2.	Recolección y Visualización de Datos Mensuales:
-# Cantidad de Basura Recogida al Mes: Además de los datos diarios, el sistema debe agregar y registrar la cantidad total de basura recogida cada mes.
+# Cantidad de residuos Recogidos al Mes: Además de los datos diarios, el sistema debe agregar y registrar la cantidad total de residuos recogidos cada mes.
 # Cálculo de Estadísticas Mensuales: Similar a los datos diarios, el sistema debe calcular y mostrar las siguientes estadísticas mensuales:
-1.	Media: La media de la cantidad de basura recogida mensualmente.
-2.	Mediana: La mediana de la cantidad de basura recogida mensualmente.
-3.	Moda: La moda de la cantidad de basura recogida mensualmente.
+1.	Media: La media de la cantidad de residuos recogidos mensualmente.
+2.	Mediana: La mediana de la cantidad de residuos recogidos mensualmente.
+3.	Moda: La moda de la cantidad de residuos recogidos mensualmente.
 3.	Visualización Gráfica:
-# Histograma: El sistema debe generar y mostrar un histograma de los datos de recolección de basura. Este histograma debe representar de forma visual la distribución de la cantidad de basura recogida, permitiendo al usuario entender mejor las tendencias y variaciones en la recolección de basura.
+# Histograma: El sistema debe generar y mostrar un histograma de los datos de recolección de residuos. Este histograma debe representar de forma visual la distribución de la cantidad de residuos recogidos, permitiendo al usuario entender mejor las tendencias y variaciones en la recolección de residuos.
 # Implementación en el Sistema
 # Para cumplir con estos requisitos, el sistema deberá contar con los siguientes componentes y métodos:
--	Clase HistorialActividad: Esta clase será responsable de registrar y gestionar los datos de recolección de basura. 
+-	Clase HistorialActividad: Esta clase será responsable de registrar y gestionar los datos de recolección de residuo. 
  # Métodos relevantes podrían incluir:
-1.	+objetoRecolectado() : void: Para registrar cada instancia de recolección de basura.
+1.	+objetoRecolectado() : void: Para registrar cada instancia de recolección de residuos.
 2.	+mostrarInformacion() : String: Para calcular y devolver las estadísticas requeridas (media, mediana, moda).
 - Clase Reporte: Esta clase generará los informes y visualizaciones gráficas de los datos.
 1.	+generarReporte() : String: Para generar un informe textual con las estadísticas diarias y mensuales.
@@ -117,10 +117,10 @@ En conjunto, estos componentes colaboran para ofrecer una solución integral que
 3.	+calcularPesoObjeto(graficaEstadisticaPeso : void) : float: Método que podría ser extendido para calcular y mostrar el histograma de los datos.
 # Beneficios para el Usuario
 # La inclusión de estas funcionalidades permitirá a los usuarios:
-1.	Monitoreo Diario y Mensual: Los usuarios podrán realizar un seguimiento detallado de la cantidad de basura recogida diariamente y mensualmente, ayudándoles a identificar patrones y picos en la generación de desechos.
+1.	Monitoreo Diario y Mensual: Los usuarios podrán realizar un seguimiento detallado de la cantidad de residuos recogidos diariamente y mensualmente, ayudándoles a identificar patrones y picos en la generación de desechos.
 2.	Análisis Estadístico: Las estadísticas de media, mediana y moda proporcionarán una comprensión más profunda de los datos de recolección de basura, facilitando la toma de decisiones informadas.
-3.	Visualización Intuitiva: El histograma ofrecerá una representación visual clara de la distribución de los datos, lo que es particularmente útil para identificar tendencias y anomalías en la recolección de basura.
-# En resumen, estos requisitos y funcionalidades mejorarán significativamente la capacidad del sistema para gestionar y analizar los datos de recolección de basura, proporcionando a los usuarios herramientas valiosas para la optimización y el control efectivo de la gestión de desechos.
+3.	Visualización Intuitiva: El histograma ofrecerá una representación visual clara de la distribución de los datos, lo que es particularmente útil para identificar tendencias y anomalías en la recolección de residuos.
+# En resumen, estos requisitos y funcionalidades mejorarán significativamente la capacidad del sistema para gestionar y analizar los datos de recolección de residuos, proporcionando a los usuarios herramientas valiosas para la optimización y el control efectivo de la gestión de desechos.
 
 
 
