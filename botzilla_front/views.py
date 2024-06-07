@@ -1,16 +1,26 @@
 from django.shortcuts import render
 
+
 # Create your views here.
-def home (request):
+def home(request):
     return render(request, 'home.html')
 
-def about (request):
+
+def about(request):
     return render(request, 'about.html')
-def estadisticas (request):
+
+
+def estadisticas(request):
     return render(request, 'estadisticas.html')
-def app (request):
+
+
+def app(request):
     return render(request, 'app.html')
-def base (request):
+
+
+def base(request):
     return render(request, 'base.html')
-def user (request):
+
+
+def user(request):
     return render(request, 'user.html')
