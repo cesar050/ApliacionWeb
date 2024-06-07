@@ -2,13 +2,19 @@
 ![image](https://github.com/cesar050/ApliacionWeb/assets/166522713/aa96e1cf-e735-4be6-b38a-981fe3d005a6)
 
 # Redaccion: Casos de Uso
+
+Ejemplo de uso:
+- Usuario abre la pagina web de botzilla, se registra y vincular su brazo robótico a su usuario.
+- Usuario se registra en botzilla para utilizar el brazo robótico en su laboratorio de investigación.
+- Usuario se registra ene botzilla para para implementarlo en un sistema para su pequeño comercio electrónico.
+
 ### El diagrama UML presentado detalla la estructura de un sistema que implica la interacción entre usuarios, gestión de objetos, control de un brazo robótico y la generación de reportes. A continuación, se describen detalladamente los casos de uso para cada uno de los componentes y relaciones en el diagrama:
 ## 1. InterfazUsuario
 
 1. 	nombre: String
 2.	email: String
 ## Métodos:
-1. 	iniciarSesion(): Permite al usuario iniciar sesión en el sistema.
+1. iniciarSesion(): Permite al usuario iniciar sesión en el sistema.
 2.	cerrarSesion(): Permite al usuario cerrar sesión.
 3. autentificacion(): Verifica las credenciales del usuario.
 4. modificarInformacion(): Permite al usuario modificar su información personal.
