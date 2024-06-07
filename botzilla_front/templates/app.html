@@ -1,22 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Comienza tu desarrollo con la página de aterrizaje de JohnDoe.">
+    <meta name="author" content="Devcrud">
+    <title>Página de aterrizaje de JohnDoe | Página de aterrizaje gratuita de Bootstrap 4.3.x</title>
 
-<link rel="stylesheet" href="style.css">
+    {% load static %}
+    <!-- Font icons -->
+    <link rel="stylesheet" href="{% static 'assets/vendors/themify-icons/css/themify-icons.css' %}">
+    <!-- Bootstrap + JohnDoe main styles -->
+    <link rel="stylesheet" href="{% static 'assets/css/johndoe.css' %}">
+    <!-- Estilos adicionales -->
+    <link rel="stylesheet" href="{% static 'assets/css/app.css' %}">
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white" data-spy="affix" data-offset-top="510">
+    <div class="container">
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse mt-sm-20 navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a href="{% url 'home'%}" class="nav-link"> Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'about'%}" class="nav-link">Materiales</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'user'%}" class="nav-link">Mi cuenta</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav brand">
+                <li class="brand-txt">
+                    <h5 class="brand-title">Bot zilla</h5>
+                    <div class="brand-subtitle">Grupo 4 | PIS</div>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a href="{% url 'app' %}" class="nav-link">APP</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'estadisticas'%}" class="nav-link">Estadisticas</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'account:login' %}" class="nav-link">Iniciar sesion</a>
+                </li>
+                <li class="nav-item last-item">
+                    <a href="{% url 'account:register' %}" class="nav-link">Registrase</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
 <div class="control-panel">
-    <!-- Fuente de video -->
+    <!-- Contenedor de video -->
     <div class="video-container">
-        <video id="video-source" width="320" height="240" controls>
+        <video id="video-source" width="729" height="" controls>
             <source src="movie.mp4" type="video/mp4">
-            Your browser does not support the video tag.
+            Tu navegador no admite la etiqueta de video.
         </video>
     </div>
 
-    <!-- Sliders para acelerar y frenar -->
+    <!-- Sliders para acelerar y dirección -->
     <div class="sliders">
         <div>
             <label for="accelerate">Acelerar</label>
             <input type="range" id="accelerate">
         </div>
         <div>
-            <label for="direcion">direccion</label>
+            <label for="direccion">Dirección</label>
             <input type="range" id="direccion">
         </div>
     </div>
@@ -50,139 +107,15 @@
     </div>
 </div>
 
-#Style
-body {
-    background: linear-gradient(to right, #000000, #0f0101);
-    color: white;
-    font-family: Arial, sans-serif;
-}
+<!-- Scripts -->
+<script src="{% static 'assets/js/app.js' %}"></script>
+<script src="script.js"></script>
+<script src="{% static 'assets/vendors/jquery/jquery-3.4.1.js' %}"></script>
+<script src="{% static 'assets/vendors/bootstrap/bootstrap.bundle.js' %}"></script>
+<script src="{% static 'assets/vendors/bootstrap/bootstrap.affix.js' %}"></script>
+<script src="{% static 'assets/vendors/isotope/isotope.pkgd.js' %}"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+<script src="{% static 'assets/js/johndoe.js' %}"></script>
 
-.control-panel {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    margin: auto;
-    background: linear-gradient(to right,  #6a3093, #010e31);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.75);
-}
-
-.message-panel {
-    background: #ffffff;
-    color: #000000;
-    padding: 10px;
-    border-radius: 5px;
-    width: 100%;
-    order: 1;
-}
-
-.video-container, .sliders, .robot-arm-controls {
-    order: 2;
-    width: 100%;
-}
-
-.video-container {
-    text-align: center;
-}
-
-.sliders, .robot-arm-controls {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.sliders div, .robot-arm-controls div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(to right, #36045a, #170825);
-    padding: 10px;
-    border-radius: 5px;
-    width: 100%;
-    margin-bottom: 10px;
-}
-
-.slider-horizontal {
-    width: 100%;
-}
-
-.slider-vertical {
-    writing-mode: bt-lr; /* IE */
-    -webkit-appearance: slider-vertical; /* WebKit */
-    width: 8px;
-    height: 150px;
-    padding: 0 5px;
-}
-
-#switch-control {
-    order: 3;
-    margin-top: auto;
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background: linear-gradient(to right, #5202e6, #434343);
-    color: #fdfdfd;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#script
-let isRobotArmControlVisible = false;
-
-document.getElementById('switch-control').addEventListener('click', function() {
-    if (isRobotArmControlVisible) {
-        // Si los controles del brazo robótico están visibles, ocúltalos y muestra los sliders
-        document.querySelector('.robot-arm-controls').style.display = 'none';
-        document.querySelector('.sliders').style.display = 'block';
-    } else {
-        // Si los sliders están visibles, ocúltalos y muestra los controles del brazo robótico
-        document.querySelector('.sliders').style.display = 'none';
-        document.querySelector('.robot-arm-controls').style.display = 'block';
-    }
-
-    // Cambia el estado
-    isRobotArmControlVisible = !isRobotArmControlVisible;
-});
-// Asume que los ids de los sliders son 'accelerate', 'direccion', 'advance', 'rotate', 'open-close', 'up-down'
-const sliders = ['accelerate', 'direccion', 'advance', 'rotate', 'open-close', 'up-down'];
-
-sliders.forEach(function(sliderId) {
-    const slider = document.getElementById(sliderId);
-
-    // Agrega un controlador de eventos 'input' al slider
-    slider.addEventListener('input', function() {
-        let message;
-        switch (sliderId) {
-            case 'accelerate':
-                message = this.value > 50 ? 'Acelerando' : 'Desacelerando';
-                break;
-            case 'direccion':
-                message = 'Girando ' + (this.value > 50 ? 'derecha' : 'izquierda');
-                break;
-            case 'advance':
-                message = this.value > 50 ? 'Avanzando' : 'Retrocediendo';
-                break;
-            case 'rotate':
-                message = 'Girando ' + (this.value > 50 ? 'derecha' : 'izquierda');
-                break;
-            case 'open-close':
-                message = this.value > 50 ? 'Abriendo' : 'Cerrando';
-                break;
-            case 'up-down':
-                message = this.value > 50 ? 'Subiendo mano' : 'Bajando mano';
-                break;
-        }
-
-        // Muestra el mensaje en el panel de mensajes
-        document.getElementById('message').textContent = message;
-    });
-
-    // Agrega un controlador de eventos 'change' al slider
-    slider.addEventListener('change', function() {
-        // Regresa el slider al punto central
-        this.value = 50;
-    });
-});
+</body>
+</html>

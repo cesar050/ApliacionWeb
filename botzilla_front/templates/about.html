@@ -27,7 +27,7 @@
                     <a href="{% url 'home'%}" class="nav-link"> Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a href="{% url 'about'%}" class="nav-link">Nosotros</a>
+                    <a href="{% url 'about'%}" class="nav-link">Materiales</a>
                 </li>
                 <li class="nav-item">
                     <a href="{% url 'user'%}" class="nav-link">Mi cuenta</a>
@@ -41,15 +41,19 @@
             </ul>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a href="#{% url 'app'%}" class="nav-link">APP</a>
+                    <a href="{% url 'app' %}" class="nav-link">APP</a>
                 </li>
                 <li class="nav-item">
                     <a href="{% url 'estadisticas'%}" class="nav-link">Estadisticas</a>
                 </li>
+                <li class="nav-item">
+                    <a href="{% url 'account:login' %}" class="nav-link">Iniciar sesion</a>
+                </li>
                 <li class="nav-item last-item">
-                    <a href="{% url 'home'%}" class="nav-link">Iniciar sesion</a>
+                    <a href="{% url 'account:register' %}" class="nav-link">Registrase</a>
                 </li>
             </ul>
+
         </div>
     </div>
 </nav>
